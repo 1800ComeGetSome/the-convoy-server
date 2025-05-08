@@ -5,16 +5,18 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #1c1c1c;
     color: white;
     line-height: 1.6;
+    padding-bottom: 100px; /* To prevent footer overlap */
 }
 
 header {
-    background-color: #2196f3;
+    background-image: url('your-banner-image.jpg'); /* Add your custom banner here */
+    background-size: cover;
     text-align: center;
-    padding: 20px 0;
+    padding: 80px 0;
 }
 
 header .banner h1 {
@@ -23,8 +25,24 @@ header .banner h1 {
 }
 
 header .banner p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #fff;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #ffeb3b;
 }
 
 nav ul {
@@ -32,30 +50,34 @@ nav ul {
     justify-content: center;
     list-style: none;
     background-color: #333;
+    margin: 0;
+    padding: 15px 0;
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #fff;
-    padding: 10px 20px;
-    transition: background 0.3s ease;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #ffeb3b;
+    color: #ffeb3b;
 }
 
 section {
-    padding: 40px;
+    padding: 60px 20px;
     text-align: center;
+    color: white;
 }
 
 section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
@@ -70,17 +92,74 @@ ul {
 }
 
 ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.info-grid div {
+    flex: 1;
+    max-width: 200px;
+}
+
+.event-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.event-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer {
     text-align: center;
     background-color: #333;
-    padding: 10px 0;
-    margin-top: 40px;
+    padding: 15px 0;
 }
 
 footer p {
     color: #fff;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2196f3;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #ffeb3b;
+}
+
+/* Smooth scrolling for section transitions */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .info-grid {
+        flex-direction: column;
+    }
+
+    .event-cards {
+        flex-direction: column;
+    }
 }
